@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <link rel="stylesheet" href="/cite/styles.css">
+ <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+    <header>
+        <h1>Welcome to the College of Information Technology and Engineering</h1>
+        <nav>
+          <ul>
+            <li><a href="/cite/index.html">Home</a></li>
+            <li><a href="/cite/admission/admission.html">Admission</a></li>
+            <li><a href="/cite/academics/academics.html">Academics</a></li>
+            <li><a href="/cite/programs/programs.html">Programs</a></li>
+            <li><a href="/cite/faculty/faculty.html">Faculty</a></li>
+            <li><a href="/cite/about/about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+        <body>
+        
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/244374438_149203787423202_3442920706101572387_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFJxVc8p283rp6pb35cEpvzwfP9Mea2IYjB8_0x5rYhiKl32JKg61iuTIlTC8pU5-YCh1wy6jUoGia7s9D93SKv&_nc_ohc=pWZ4szfYyjsAX9CyWwN&_nc_ht=scontent.fmnl3-4.fna&oh=00_AfDuENNhsPNN4hFJQUciPypRq6oNze2g2pQ2f2zGwO0ShQ&oe=6450A5D3" style="width:100%">
+          <div class="text">Maricel B. Tabago</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/244261488_149203747423206_7776818301822156141_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHaEkPD8KKUG9nRTcXnUjJyUu09yH8a0z1S7T3IfxrTPev_v0LsFGRsMl8ODafxqCafNa7R0fTwexaMF1jk75g2&_nc_ohc=HxMf_Q4YLOEAX9QU3er&_nc_ht=scontent.fmnl3-2.fna&oh=00_AfC_vVhc_2zBQPM_tUzKGMq1RKeiMRX6u4ocGhvT9Id20Q&oe=6450B6DA" style="width:100%">
+          <div class="text">Roborto N. Mauricio</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/244129466_149203707423210_3589804812254629890_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGoJhlZQPq1IQb7iVgSPHjC46EemC4pynfjoR6YLinKd0M2NOloCdPpsyNkzNkz-Cbm8mAuN4kaoCvwu_lLdljb&_nc_ohc=UT4zDIsG3PsAX-DTjxe&_nc_ht=scontent.fmnl3-4.fna&oh=00_AfBaAqQzj4lusB4s0zxBR2LanbCBduH6hPpqcs_9J0ZPcQ&oe=64508EDC" style="width:100%">
+          <div class="text">Rovelinda A. Martinez</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        <footer>
+          <p>&copy; 2023 College of Information Technology and Engineering</p>
+      </footer>
+ </body>
+</html>
